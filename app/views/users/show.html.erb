@@ -12,7 +12,9 @@
 
 <p>
   <strong>Posts:</strong>
-  <%= @user.microposts %>
+  <% @user.microposts.each do |post| %>
+  <li><%= post.content %></li>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
